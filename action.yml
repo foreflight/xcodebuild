@@ -119,8 +119,8 @@ inputs:
     required: false
     default: 'false'
   verbosity:
-    description: One of `xcpretty`, `quiet` or `verbose`.
-    default: xcpretty
+    description: One of `xcpretty`, `xcbeautify`, `quiet` or `verbose`.
+    default: xcbeautify
     required: false
   upload-logs:
     description: |

@@ -45,7 +45,6 @@ async function main() {
   const warningsAsErrors = core.getBooleanInput('warnings-as-errors')
   const destination = await getDestination(selected, platform, platformVersion)
   const identity = getIdentity(core.getInput('code-sign-identity'), platform)
-  const xcpretty = verbosity() == 'xcpretty'
   const workspace = core.getInput('workspace')
 
   core.info(`» Selected Xcode ${selected}`)
@@ -242,7 +241,7 @@ async function main() {
 
       if (action) args.push(action)
 
-      await xcodebuildX(args, xcpretty)
+      await xcodebuildX(args, verbosity())
     })
   }
 

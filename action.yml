@@ -135,6 +135,12 @@ inputs:
       This may be a security risk.
     default: 'false'
     required: false
+  trust-macros:
+    description: |
+      Skip Swift Package Macro validation.
+      This may be a security risk.
+    default: 'false'
+    required: false
 runs:
   using: 'node20'
   main: 'dist/index.js'

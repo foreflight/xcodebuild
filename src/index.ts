@@ -236,6 +236,10 @@ async function main() {
         args.push('-skipPackagePluginValidation')
       }
 
+      if (core.getBooleanInput('trust-macros')) {
+        args.push('-skipMacroValidation')
+      }
+
       if (action) args.push(action)
 
       await xcodebuildX(args, xcpretty)
